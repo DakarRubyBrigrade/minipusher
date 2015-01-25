@@ -1,0 +1,12 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io.connect();
+
+    socket.on('my_event', function (data) {
+        alert(data);
+    });
+
+    socket.on('new_user', function (user) {
+        alert(user.prenom + ' ' + user.nom + ' vient de se connecter');
+    });
+</script>
